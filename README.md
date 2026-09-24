@@ -18,9 +18,9 @@
 
 ## About me
 
-I'm a backend engineer from Latvia. I started with **Ruby on Rails** and kept going down the stack: **Rust** for systems and tooling, **Go** for storage and networking, and **Docker/Linux** for everything I run myself.
+I'm a backend engineer from Latvia. I started with Ruby on Rails and moved down the stack from there. These days I write Rust for systems and tooling and Go for storage and networking, and I run my own servers on Docker and Linux.
 
-I build software that is **boring in production**: predictable, observable, well tested and easy to hand off. I hold my own code to a strict bar. In Rust that means `unsafe` forbidden, `unwrap`/`panic` denied at compile time, and supply-chain checks with `cargo-deny`. When a workflow annoys me, I build the tool that fixes it, and then I use it every day.
+I like software that is boring in production: you can predict it, watch it, and hand it to someone else. My Rust projects forbid `unsafe`, fail the build on `unwrap` or `panic`, and check dependencies with `cargo-deny`. Most of my tools started as fixes for workflows that annoyed me.
 
 ```ruby
 class ViktorsBaikers
@@ -35,22 +35,22 @@ class ViktorsBaikers
 end
 ```
 
-**What I'm working on**
+### What I'm working on
 
-- 🦀 **Rivect**: my own AI coding CLI/TUI, written from scratch in Rust. It is not a fork or a wrapper around another agent. Most agents run a fixed pipeline. Rivect has one adaptive, event-driven harness core that picks the next step from goals, state and evidence. Small tasks stay cheap, and big tasks get a spec, TDD and a live todo list automatically. Every model call gets its own model, effort level, budget and fallback, and the design targets a 97–98% provider cache-read rate on warm runs. It also plans for a unified code graph, LSP, version-aware docs, memory across sessions, and a process that learns from verified outcomes. *Actively in development.* Built so far: a fullscreen TUI and headless JSON-RPC, a sandboxed executor behind policy admission, and provider routing with fallback for OpenAI, Gemini, Alibaba and OpenAI-compatible APIs, with API keys in the OS keychain.
-- 🛡️ **DevRites**: an engineering workflow that stops AI agents from shipping half-baked code. Every feature goes spec → plan → build → prove → review → ship, with state on disk and no "done" without proof. Works with Claude Code, Codex and other agents.
-- 🌐 **Looking Glass**: a self-hosted network diagnostics console. Rust backend, Svelte UI, one container, and remote agents that enroll over an outbound tunnel.
-- ☁️ **Teldrive / rclone**: my own forks of Telegram-backed cloud storage. I added resumable and retried multipart uploads, cursor pagination, bot health diagnostics, and a GHCR/Docker Hub release pipeline.
+- [Rivect](https://github.com/ViktorsBaikers/Rivect) is my own AI coding CLI/TUI, written from scratch in Rust with no other agent underneath. Where most agents run a fixed pipeline, Rivect's event-driven core picks the next step from the task's goals, current state and evidence so far. A small question stays cheap, while a large feature gets a spec, TDD and a live todo list without the user asking. Each model call has its own model, effort level, budget and fallback, and the design aims for a 97 to 98% provider cache-read rate on warm runs. The plan also covers a code graph, LSP, version-aware docs, memory across sessions, and a process that learns from verified results. It's still in development. The working parts today are a fullscreen TUI, a headless JSON-RPC mode, a sandboxed executor that checks policy before it acts, and provider routing with fallback for OpenAI, Gemini, Alibaba and OpenAI-compatible APIs. API keys live in the OS keychain.
+- [DevRites](https://github.com/ViktorsBaikers/DevRites) keeps AI agents from shipping half-baked code. Each feature moves through spec, plan, build, proof, review and ship, the state lives on disk, and the agent can't mark work done until proof is recorded. It works with Claude Code, Codex and other agents.
+- [Looking Glass](https://github.com/ViktorsBaikers/looking-glass) is a self-hosted network diagnostics console: a Rust backend and Svelte UI in one container, with remote agents that enroll over an outbound tunnel.
+- In my forks of Teldrive and rclone (cloud storage on top of Telegram), I added resumable multipart uploads with retries, cursor pagination, bot health diagnostics, and a release pipeline to GHCR and Docker Hub.
 
-**What I know well**
+### What I know well
 
-- **Backend:** Rails APIs and scrapers, NestJS on Bun, REST and JSON-RPC design, PostgreSQL, Redis, SQLite
-- **Systems:** Rust CLIs and TUIs, sandboxing, strict lint and test gates, Go networking and storage clients
-- **Infrastructure:** Docker and Compose, CapRover, CI/CD release pipelines, Terraform, Linux servers
-- **Hosting:** WHMCS customization, billing and provisioning automation, seedboxes, tuning qBittorrent and libtorrent
-- **Media & embedded:** Kodi, CoreELEC and Amlogic Linux builds
+- Backend: Rails APIs and scrapers, NestJS on Bun, REST and JSON-RPC design, PostgreSQL, Redis, SQLite
+- Systems: Rust CLIs and TUIs, sandboxing, strict lint and test checks, Go networking and storage clients
+- Infrastructure: Docker and Compose, CapRover, CI/CD release pipelines, Terraform, Linux servers
+- Hosting: WHMCS customization, billing and provisioning automation, seedboxes, qBittorrent and libtorrent tuning
+- Media and embedded: Kodi, CoreELEC and Amlogic Linux builds
 
-**Ask me about:** AI coding workflows, Rust tooling, Rails backends, self-hosting, hosting automation.
+Ask me about AI coding workflows, Rust tooling, Rails backends or self-hosting.
 
 ---
 
@@ -83,9 +83,9 @@ end
 
 | Project | What it does |
 | --- | --- |
-| [**Rivect**](https://github.com/ViktorsBaikers/Rivect) | Native AI coding CLI/TUI, written from scratch in Rust. An adaptive harness core instead of fixed stages, built-in spec and TDD, per-call model and effort routing with fallback, and cache-aware token efficiency. Sandboxed, policy-gated and keychain-secured. *In active development.* |
-| [**DevRites**](https://github.com/ViktorsBaikers/DevRites) | Stops AI agents from shipping half-baked code. Spec, plan, build, prove, review and ship, with every step recorded on disk and no "done" without proof. |
-| [**Looking Glass**](https://github.com/ViktorsBaikers/looking-glass) | Self-hosted network diagnostics console. One container, a web UI, and remote agents that connect over an outbound tunnel. |
+| [Rivect](https://github.com/ViktorsBaikers/Rivect) | AI coding CLI/TUI written from scratch in Rust. An adaptive core chooses each step, with spec and TDD built in, per-call model and effort routing with fallback, and cache-aware token use. In development. |
+| [DevRites](https://github.com/ViktorsBaikers/DevRites) | Keeps AI agents from shipping half-baked code. Every step from spec to ship is recorded on disk, and work counts as done only once proof exists. |
+| [Looking Glass](https://github.com/ViktorsBaikers/looking-glass) | Self-hosted network diagnostics console in one container, with remote agents that connect over an outbound tunnel. |
 
 ---
 
@@ -111,7 +111,7 @@ end
 
 ### Let's build something that stays up
 
-Open to backend, infrastructure and automation work. Open an issue on one of my repos or reach out through GitHub.
+I'm open to backend, infrastructure and automation work. Open an issue on any of my repos to get in touch.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:cc0000,50:203a43,100:0f2027&height=110&section=footer" width="100%"/>
 
