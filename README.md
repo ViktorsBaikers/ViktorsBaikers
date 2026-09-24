@@ -37,7 +37,7 @@ end
 
 **What I'm working on**
 
-- 🦀 **Rivect**: a terminal-native AI coding agent in Rust. Fullscreen TUI plus a headless JSON-RPC mode, a sandboxed tool executor, policy-gated actions, and routing across OpenAI, Gemini and OpenAI-compatible providers with fallback. API keys stay in the OS keychain.
+- 🦀 **Rivect**: my own AI coding CLI/TUI, written from scratch in Rust. It is not a fork or a wrapper around another agent. Most agents run a fixed pipeline. Rivect has one adaptive, event-driven harness core that picks the next step from goals, state and evidence. Small tasks stay cheap, and big tasks get a spec, TDD and a live todo list automatically. Every model call gets its own model, effort level, budget and fallback, and the design targets a 97–98% provider cache-read rate on warm runs. It also plans for a unified code graph, LSP, version-aware docs, memory across sessions, and a process that learns from verified outcomes. *Actively in development.* Built so far: a fullscreen TUI and headless JSON-RPC, a sandboxed executor behind policy admission, and provider routing with fallback for OpenAI, Gemini, Alibaba and OpenAI-compatible APIs, with API keys in the OS keychain.
 - 🛡️ **DevRites**: an engineering workflow that stops AI agents from shipping half-baked code. Every feature goes spec → plan → build → prove → review → ship, with state on disk and no "done" without proof. Works with Claude Code, Codex and other agents.
 - 🌐 **Looking Glass**: a self-hosted network diagnostics console. Rust backend, Svelte UI, one container, and remote agents that enroll over an outbound tunnel.
 - ☁️ **Teldrive / rclone**: my own forks of Telegram-backed cloud storage. I added resumable and retried multipart uploads, cursor pagination, bot health diagnostics, and a GHCR/Docker Hub release pipeline.
@@ -83,7 +83,7 @@ end
 
 | Project | What it does |
 | --- | --- |
-| [**Rivect**](https://github.com/ViktorsBaikers/Rivect) | Terminal-native AI coding agent in Rust. Fullscreen TUI or headless JSON-RPC, sandboxed execution, policy-gated tools, and multi-provider routing with fallback. |
+| [**Rivect**](https://github.com/ViktorsBaikers/Rivect) | Native AI coding CLI/TUI, written from scratch in Rust. An adaptive harness core instead of fixed stages, built-in spec and TDD, per-call model and effort routing with fallback, and cache-aware token efficiency. Sandboxed, policy-gated and keychain-secured. *In active development.* |
 | [**DevRites**](https://github.com/ViktorsBaikers/DevRites) | Stops AI agents from shipping half-baked code. Spec, plan, build, prove, review and ship, with every step recorded on disk and no "done" without proof. |
 | [**Looking Glass**](https://github.com/ViktorsBaikers/looking-glass) | Self-hosted network diagnostics console. One container, a web UI, and remote agents that connect over an outbound tunnel. |
 
