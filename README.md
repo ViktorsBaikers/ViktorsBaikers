@@ -1,15 +1,17 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:cc0000&height=200&section=header&text=Viktors%20Baikers&fontSize=56&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Ruby%20on%20Rails%20%E2%80%A2%20Rust%20%E2%80%A2%20Go%20%E2%80%A2%20Self-Hosted%20Infrastructure&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:cc0000&height=200&section=header&text=Viktors%20Baikers&fontSize=56&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Staff%20Software%20Engineer%20%E2%80%A2%20AI%20Agents%20%E2%80%A2%20Full%20Stack%20%E2%80%A2%20Self-Hosted&descAlignY=58&descSize=18" width="100%"/>
 
 <a href="https://github.com/ViktorsBaikers">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=CC0000&center=true&vCenter=true&width=680&lines=I+ship+software+that+stays+up.;Rails+APIs+%E2%80%A2+Rust+systems+%E2%80%A2+Go+tooling;Building+a+terminal+AI+coding+agent+in+Rust;Making+AI+prove+its+code+before+it+ships;Self-hosting+everything+I+can" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=CC0000&center=true&vCenter=true&width=680&lines=Staff+Software+Engineer+from+Riga;Banking%2C+AdTech+and+government+systems;Building+AI+agents+and+developer+tooling;Making+AI+prove+its+code+before+it+ships;Self-hosting+everything+I+can" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<img src="https://img.shields.io/badge/Location-Latvia-9E3039?style=for-the-badge&logo=googlemaps&logoColor=white"/>
-<img src="https://img.shields.io/badge/Focus-Backend%20%26%20Infra-0f2027?style=for-the-badge&logo=serverless&logoColor=white"/>
+<img src="https://img.shields.io/badge/Location-Riga%2C%20Latvia-9E3039?style=for-the-badge&logo=googlemaps&logoColor=white"/>
+<img src="https://img.shields.io/badge/Focus-Full%20Stack%20%26%20AI-0f2027?style=for-the-badge&logo=serverless&logoColor=white"/>
+<img src="https://img.shields.io/badge/Open%20to-Relocation-203a43?style=for-the-badge"/>
+<a href="https://www.linkedin.com/in/viksb/"><img src="https://img.shields.io/badge/LinkedIn-viksb-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <img src="https://komarev.com/ghpvc/?username=ViktorsBaikers&style=for-the-badge&color=cc0000&label=Profile+Views"/>
 
 </div>
@@ -18,39 +20,52 @@
 
 ## About me
 
-I'm a backend engineer from Latvia. I started with Ruby on Rails and moved down the stack from there. These days I write Rust for systems and tooling and Go for storage and networking, and I run my own servers on Docker and Linux.
+I'm a Staff Software Engineer from Riga, Latvia. I've spent over a decade building and modernising applications for banking, AdTech and government. I work across front end, back end and DevOps, and I design the system architecture and integrations around them. In technical lead roles I've made the architecture decisions and optimised existing systems.
 
-I like software that is boring in production: you can predict it, watch it, and hand it to someone else. My Rust projects forbid `unsafe`, fail the build on `unwrap` or `panic`, and check dependencies with `cargo-deny`. Most of my tools started as fixes for workflows that annoyed me.
+Lately most of my work is AI-driven development: I build AI agents, automation workflows and developer tooling that speed up engineering teams. I also want that AI to prove its code before it ships, which is why I built DevRites.
+
+Outside work I write Rust and Go and self-host most of what I use on Docker and Linux. My Rust projects forbid `unsafe`, fail the build on `unwrap` or `panic`, and check dependencies with `cargo-deny`.
 
 ```ruby
 class ViktorsBaikers
   def initialize
-    @location   = "Latvia"
+    @role       = "Staff Software Engineer"
+    @location   = "Riga, Latvia"
     @roots      = %w[Ruby Rails]
-    @daily      = %w[Rust Go TypeScript]
-    @runs_on    = %w[Docker Linux self-hosted]
-    @building   = %w[Rivect DevRites looking-glass]
+    @daily      = %w[Go Rust TypeScript Svelte]
+    @building   = %w[Boxset DevRites Rivect looking-glass]
+    @open_to    = %w[relocation remote hybrid B2B]
     @motto      = "If it isn't proven, it isn't done."
   end
 end
 ```
 
+### Experience
+
+Most recently I was a Staff Software Engineer at DotiDot, an e-commerce SaaS platform for multichannel advertising, where I introduced AI-assisted development to the team. Before that I led a team of 3 on Autentica's online banking platform for corporate customers, owning the architecture, the banking API and electronic ID integrations, and production incidents. Earlier I was tech lead on a government territorial planning system at CatchSmart and built cadastral systems for the Latvian State Land Service at Visma Consulting. I started out doing freelance web work in 2014.
+
+Certificates: Claude Certified Developer: Foundations (Anthropic) · Ruby Association Certified Ruby Programmer Silver
+
+The full history is on [LinkedIn](https://www.linkedin.com/in/viksb/).
+
 ### What I'm working on
 
-- [Rivect](https://github.com/ViktorsBaikers/Rivect) is my own AI coding CLI/TUI, written from scratch in Rust with no other agent underneath. Where most agents run a fixed pipeline, Rivect's event-driven core picks the next step from the task's goals, current state and evidence so far. A small question stays cheap, while a large feature gets a spec, TDD and a live todo list without the user asking. Each model call has its own model, effort level, budget and fallback, and the design aims for a 97 to 98% provider cache-read rate on warm runs. The plan also covers a code graph, LSP, version-aware docs, memory across sessions, and a process that learns from verified results. It's still in development. The working parts today are a fullscreen TUI, a headless JSON-RPC mode, a sandboxed executor that checks policy before it acts, and provider routing with fallback for OpenAI, Gemini, Alibaba and OpenAI-compatible APIs. API keys live in the OS keychain.
-- [DevRites](https://github.com/ViktorsBaikers/DevRites) keeps AI agents from shipping half-baked code. Each feature moves through spec, plan, build, proof, review and ship, the state lives on disk, and the agent can't mark work done until proof is recorded. It works with Claude Code, Codex and other agents.
+- [Boxset](https://github.com/ViktorsBaikers/Boxset) is one self-hosted app for a movie, TV and anime library. It tracks wanted titles, finds releases through indexers, sends them to download clients, then imports, renames and upgrades the files and keeps media servers up to date. Anime gets its own numbering and metadata, and an existing setup can be imported or kept in two-way sync. The backend is Go on SQLite and the UI is SvelteKit with Tailwind. I'm building it milestone by milestone through DevRites, and it's still in development.
+- [DevRites](https://github.com/ViktorsBaikers/DevRites) is a workflow for AI coding agents that lives in your repository. It takes a feature from spec and plan through code, recorded proof and a release decision, and nothing ships without proof and a human go-ahead. The state stays in `.devrites/`, so it survives a cleared chat or a switch of tools. It runs in Claude Code, Codex, omp, pi and Devin CLI, installs from npm, and has a site at [devrites.com](https://devrites.com).
+- [Rivect](https://github.com/ViktorsBaikers/Rivect) is my AI coding CLI/TUI, written from scratch in Rust. Its event-driven core picks the next step from the task's goals and the evidence so far, so a small question stays cheap and a large feature gets a spec, TDD and a live todo list. It's in development; the fullscreen TUI, headless JSON-RPC mode, sandboxed executor and provider routing with fallback work today.
 - [Looking Glass](https://github.com/ViktorsBaikers/looking-glass) is a self-hosted network diagnostics console: a Rust backend and Svelte UI in one container, with remote agents that enroll over an outbound tunnel.
 - In my forks of Teldrive and rclone (cloud storage on top of Telegram), I added resumable multipart uploads with retries, cursor pagination, bot health diagnostics, and a release pipeline to GHCR and Docker Hub.
 
 ### What I know well
 
-- Backend: Rails APIs and scrapers, NestJS on Bun, REST and JSON-RPC design, PostgreSQL, Redis, SQLite
-- Systems: Rust CLIs and TUIs, sandboxing, strict lint and test checks, Go networking and storage clients
-- Infrastructure: Docker and Compose, CapRover, CI/CD release pipelines, Terraform, Linux servers
-- Hosting: WHMCS customization, billing and provisioning automation, seedboxes, qBittorrent and libtorrent tuning
-- Media and embedded: Kodi, CoreELEC and Amlogic Linux builds
+- Architecture: system design, enterprise integrations, banking APIs and electronic identification, technical leadership
+- Full stack: Ruby on Rails, Go, Rust, Java, Node.js, TypeScript, React, Next.js, Svelte, REST, GraphQL and JSON-RPC
+- AI: AI agents, LLM integration, automation workflows and developer tooling
+- Data: PostgreSQL, Redis, SQLite
+- DevOps: Docker and Compose, CI/CD release pipelines, Terraform, Linux servers, on-call production support
+- Hosting and media: WHMCS automation, seedboxes, libtorrent tuning, Kodi and CoreELEC builds
 
-Ask me about AI coding workflows, Rust tooling, Rails backends or self-hosting.
+Ask me about AI coding workflows, architecture, Rails and Go backends, or self-hosting.
 
 ---
 
@@ -59,10 +74,10 @@ Ask me about AI coding workflows, Rust tooling, Rails backends or self-hosting.
 <div align="center">
 
 **Languages**<br/>
-<img src="https://skillicons.dev/icons?i=ruby,rust,go,ts,js,php,java,bash&theme=dark" />
+<img src="https://skillicons.dev/icons?i=ruby,go,rust,java,ts,js,php,bash&theme=dark" />
 
 **Frameworks & Runtime**<br/>
-<img src="https://skillicons.dev/icons?i=rails,nodejs,bun,nestjs,react,nextjs,svelte&theme=dark" />
+<img src="https://skillicons.dev/icons?i=rails,nodejs,bun,nestjs,react,nextjs,svelte,tailwind,vite&theme=dark" />
 
 **Data & Infrastructure**<br/>
 <img src="https://skillicons.dev/icons?i=postgres,redis,sqlite,docker,linux,nginx,cloudflare,terraform,githubactions&theme=dark" />
@@ -75,16 +90,18 @@ Ask me about AI coding workflows, Rust tooling, Rails backends or self-hosting.
 
 <div align="center">
 
-<a href="https://github.com/ViktorsBaikers/Rivect"><img src="https://img.shields.io/github/languages/top/ViktorsBaikers/Rivect?style=for-the-badge&logo=rust&label=Rivect&color=cc0000"/></a>
+<a href="https://github.com/ViktorsBaikers/Boxset"><img src="https://img.shields.io/badge/Boxset-Go%20%2B%20Svelte-cc0000?style=for-the-badge&logo=go&logoColor=white"/></a>
 <a href="https://github.com/ViktorsBaikers/DevRites"><img src="https://img.shields.io/github/stars/ViktorsBaikers/DevRites?style=for-the-badge&logo=github&label=DevRites&color=203a43"/></a>
+<a href="https://github.com/ViktorsBaikers/Rivect"><img src="https://img.shields.io/github/languages/top/ViktorsBaikers/Rivect?style=for-the-badge&logo=rust&label=Rivect&color=0f2027"/></a>
 <a href="https://github.com/ViktorsBaikers/looking-glass"><img src="https://img.shields.io/github/languages/top/ViktorsBaikers/looking-glass?style=for-the-badge&logo=rust&label=Looking%20Glass&color=0f2027"/></a>
 
 </div>
 
 | Project | What it does |
 | --- | --- |
-| [Rivect](https://github.com/ViktorsBaikers/Rivect) | AI coding CLI/TUI written from scratch in Rust. An adaptive core chooses each step, with spec and TDD built in, per-call model and effort routing with fallback, and cache-aware token use. In development. |
-| [DevRites](https://github.com/ViktorsBaikers/DevRites) | Keeps AI agents from shipping half-baked code. Every step from spec to ship is recorded on disk, and work counts as done only once proof exists. |
+| [Boxset](https://github.com/ViktorsBaikers/Boxset) | One self-hosted app for a movie, TV and anime library, from finding releases to organised files. Go and SQLite backend, SvelteKit UI. In development. |
+| [DevRites](https://github.com/ViktorsBaikers/DevRites) | Workflow for AI coding agents. Every step from spec to ship is recorded in the repository, and nothing ships without proof and a human go-ahead. |
+| [Rivect](https://github.com/ViktorsBaikers/Rivect) | AI coding CLI/TUI written from scratch in Rust, with an adaptive core, built-in spec and TDD, and per-call model routing with fallback. In development. |
 | [Looking Glass](https://github.com/ViktorsBaikers/looking-glass) | Self-hosted network diagnostics console in one container, with remote agents that connect over an outbound tunnel. |
 
 ---
@@ -111,7 +128,7 @@ Ask me about AI coding workflows, Rust tooling, Rails backends or self-hosting.
 
 ### Let's build something that stays up
 
-I'm open to backend, infrastructure and automation work. Open an issue on any of my repos to get in touch.
+I'm open to staff and lead roles in full-stack or AI engineering, on-site, hybrid or remote, and to B2B contracts. I'm based in Riga and open to relocating. Reach me on [LinkedIn](https://www.linkedin.com/in/viksb/).
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:cc0000,50:203a43,100:0f2027&height=110&section=footer" width="100%"/>
 
